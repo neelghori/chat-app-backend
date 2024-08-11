@@ -95,7 +95,7 @@ export function SocketIoFunction(io: any) {
         const room = await ChatRoomModel.findById(room_id);
 
         if (user && room) {
-          const newMessage = new Chat({
+          const newMessage = new ChatRoomModel({
             chat_id: room._id,
             message: [
               {
